@@ -1,0 +1,23 @@
+{
+  "name": "video-timestamp",
+  "version": "0.0.1",
+  "description": "Easy commandline timestamp generator as a companion for livestreams",
+  "main": "main.js",
+  "bin": "main.js",
+  "scripts": {
+    "build": "pkg --target host --output ./build/timestamp.exe ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlthalusAvan/video-timestamp.git"
+  },
+  "author": "AlthalusAvan",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/AlthalusAvan/video-timestamp/issues"
+  },
+  "homepage": "https://github.com/AlthalusAvan/video-timestamp#readme",
+  "dependencies": {
+    "readline": "^1.3.0"
+  }
+}
