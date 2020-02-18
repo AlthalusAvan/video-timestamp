@@ -33,11 +33,14 @@ function createTimestamps() {
 createTimestamps();
 
 rl.on("close", () => {
-    let timeSinceStart = new Date() - startTime;
+    let currentDateTime = new Date();
+    let timeSinceStart = currentDateTime - startTime;
     console.log("\nTotal stream time: " + msToHMS(timeSinceStart));
     
+    let formattedDateTime = currentDateTime.getFullYear() + "-" + (currentDateTime.getMonth() + 1) + "-" + currentDateTime.getDate() + "-" + currentDateTime.getHours() + "-" + currentDateTime.getMinutes() + "-" + currentDateTime.getSeconds() 
+
     fs.writeFile(
-        "./timestamps.txt",
+        `./timestamps-${formattedDateTime}.txt`,
         timestamps.map(function(v){ return v }).join('\n'),
         function (err) { console.log(err ? 'Error :'+err : 'ok') }
    );
